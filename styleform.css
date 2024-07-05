@@ -1,0 +1,139 @@
+:root {
+    --mainColor:lime;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, black, black, black,
+     black, var(--mainColor,lime),
+     black,black, black,black);
+    background-size: 1px 3000px;
+    animation: move-bgcolor 7.5s ease-in-out infinite;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(26, auto);
+    grid-template-rows: repeat(13, auto);
+    gap: 3px;
+}
+@keyframes move-bgcolor {
+    0% {
+    background-position: 100% 100%;
+    }
+    100%{
+    background-position: 100% 0%;
+    }
+}
+
+.container div {
+    background-color: #1f1a1a;
+    transition-duration: .2s; 
+    transition-delay: .5s;
+}
+
+.container div:hover {
+    background-color: var(--mainColor,lime);
+    transition-delay: 0s;
+}
+
+.form {
+    width: 350px;
+    height: 357px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(53, 51, 51);
+    transform: translate(-50%, -50%);
+}
+
+#header {
+    color: var(--mainColor,lime);
+    text-align: center;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.text {
+    position: relative;
+    left: 33px;
+    height: 45px;
+    width: 80%;
+    background-color: #5a5757;
+    border: none;
+    color: white;
+    padding-left: 10px;
+    outline: none;
+}
+
+.tex {
+    color: white;
+    position: absolute;
+    bottom: 63.5%;
+    left: 12%;
+    font-size: 15px;
+}
+
+.text:focus + .tex {
+    color: var(--mainColor,lime);
+    position: absolute;
+    bottom: 68%;
+    left: 12%;
+    font-size: 11px;
+    transition-duration: .4s;
+}
+
+.password {
+    position: relative;
+    left: 33px;
+    height: 45px;
+    width: 80%;
+    background-color: #5a5757;
+    border: none;
+    color: white;
+    margin-top: 25px;
+    padding-left: 10px;
+    outline: none;
+}
+.pas {
+    color: white;
+    position: absolute;
+    bottom: 43%;
+    left: 12%;
+    font-size: 15px;
+}
+
+.password:focus + .pas {
+    color: var(--mainColor,lime);
+    position: absolute;
+    bottom: 48%;
+    left: 12%;
+    font-size: 11px;
+    transition-duration: .4s;
+}
+
+.signup {
+    color: var(--mainColor,lime);
+    text-align: right;
+    position: relative;
+    top: 67px;
+    right: 20px;
+    text-decoration: none;
+}
+.forgotpassword {
+    color: white;
+    text-align: left;
+    position: relative;
+    top: 35px;
+    left: 35px;
+    text-decoration: none;
+}
+
+.submit {
+    background-color: var(--mainColor,lime);
+    transform: translate(31px,51px);
+    width: 82%;
+    height: 37px;
+    border: none;
+}
